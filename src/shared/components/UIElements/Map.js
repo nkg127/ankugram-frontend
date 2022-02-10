@@ -2,8 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "./Map.css";
-mapboxgl.accessToken =
-  "pk.eyJ1IjoidHJiYWtzIiwiYSI6ImNrejhkZHV3ajB1ZHAycHM4dDdveHlzamUifQ.68kL5W8JdZdU_rRgMFX_Rw";
+mapboxgl.accessToken =process.env.REACT_APP_MAPBOX_API_KEY;
 
 const Map = props => {
   const mapContainer = useRef(null);
